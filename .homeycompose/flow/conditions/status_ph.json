@@ -1,0 +1,66 @@
+{
+  "id": "status_ph",
+  "title": {
+    "en": "pH status !{{is|is not}} equal to...",
+    "nl": "pH status !{{is|is niet}} gelijk aan..."
+  },
+  "titleFormatted": {
+    "en": "pH status !{{is|is not}} equal to [[status_ph]]",
+    "nl": "pH status !{{is|is niet}} gelijk aan [[status_ph]]"
+  },
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "args": [
+    {
+      "type": "dropdown",
+      "name": "status_ph",
+      "title": {
+        "en": "pH status"
+      },
+      "values": [
+        {
+          "id": "TooLow",
+          "title": {
+            "en": "Too low",
+            "nl": "Te laag"
+          }
+        },
+        {
+          "id": "MediumLow",
+          "title": {
+            "en": "Low",
+            "nl": "Laag"
+          }
+        },
+        {
+          "id": "Medium",
+          "title": {
+            "en": "Good",
+            "nl": "Goed"
+          }
+        },
+        {
+          "id": "MediumHigh",
+          "title": {
+            "en": "High",
+            "nl": "Hoog"
+          }
+        },
+        {
+          "id": "TooHigh",
+          "title": {
+            "en": "Too high",
+            "nl": "Te hoog"
+          }
+        }
+      ]
+    },
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=analysr"
+    }
+  ]
+}

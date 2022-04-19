@@ -1,0 +1,623 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.goflipr",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "sdk": 3,
+  "brandColor": "#3385A9",
+  "name": {
+    "en": "Flipr"
+  },
+  "description": {
+    "en": "Finally enjoy your swimming pool",
+    "nl": "Eindelijk genieten van uw zwembad"
+  },
+  "category": [
+    "appliances"
+  ],
+  "tags": {
+    "en": [
+      "Flipr",
+      "AnalysR",
+      "health",
+      "swimming",
+      "pool",
+      "measures"
+    ],
+    "nl": [
+      "Flipr",
+      "Analysr",
+      "gezondheid",
+      "zwembad",
+      "bad",
+      "metingen"
+    ]
+  },
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "permissions": [],
+  "author": {
+    "name": "Edwin van de Pol",
+    "email": "developer@edwinvandepol.nl"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Edwin van de Pol",
+        "email": "developer@edwinvandepol.nl"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "edwinvdpol"
+      }
+    }
+  },
+  "homepage": "https://goflipr.com/",
+  "homeyCommunityTopicId": 62842,
+  "support": "https://community.homey.app/t/62842",
+  "bugs": {
+    "url": "https://community.homey.app/t/62842"
+  },
+  "flow": {
+    "triggers": [
+      {
+        "title": {
+          "en": "The chlorine value changed",
+          "nl": "De chloor waarde is veranderd"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=analysr"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "measure_ci",
+            "title": {
+              "en": "Chlorine"
+            },
+            "type": "number",
+            "example": 7.2
+          }
+        ],
+        "id": "measure_ci_changed"
+      },
+      {
+        "title": {
+          "en": "The redox value changed",
+          "nl": "De redoxwaarde is veranderd"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=analysr"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "measure_orp",
+            "title": {
+              "en": "Redox"
+            },
+            "type": "number",
+            "example": 400
+          }
+        ],
+        "id": "measure_orp_changed"
+      },
+      {
+        "title": {
+          "en": "The pH value changed",
+          "nl": "De pH waarde is veranderd"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=analysr"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "measure_ph",
+            "title": {
+              "en": "pH"
+            },
+            "type": "number",
+            "example": 7.2
+          }
+        ],
+        "id": "measure_ph_changed"
+      },
+      {
+        "title": {
+          "en": "The chlorine status changed",
+          "nl": "De chloor status is veranderd"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=analysr"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "status_ci",
+            "type": "string",
+            "title": {
+              "en": "Chlorine status",
+              "nl": "Chloor status"
+            },
+            "example": {
+              "en": "Too high",
+              "nl": "Te hoog"
+            }
+          }
+        ],
+        "id": "status_ci_changed"
+      },
+      {
+        "title": {
+          "en": "The pH status changed",
+          "nl": "De pH status is veranderd"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=analysr"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "status_ph",
+            "type": "string",
+            "title": {
+              "en": "pH status"
+            },
+            "example": {
+              "en": "Too high",
+              "nl": "Te hoog"
+            }
+          }
+        ],
+        "id": "status_ph_changed"
+      }
+    ],
+    "conditions": [
+      {
+        "id": "status_ci",
+        "title": {
+          "en": "Chlorine status !{{is|is not}} equal to...",
+          "nl": "Chloor status !{{is|is niet}} gelijk aan...."
+        },
+        "titleFormatted": {
+          "en": "Chlorine status !{{is|is not}} equal to [[status_ci]]",
+          "nl": "Chloor status !{{is|is niet}} gelijk aan [[status_ci]]"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "args": [
+          {
+            "type": "dropdown",
+            "name": "status_ci",
+            "title": {
+              "en": "Chlorine status",
+              "nl": "Chloor status"
+            },
+            "values": [
+              {
+                "id": "TooLow",
+                "title": {
+                  "en": "Too low",
+                  "nl": "Te laag"
+                }
+              },
+              {
+                "id": "MediumLow",
+                "title": {
+                  "en": "Low",
+                  "nl": "Laag"
+                }
+              },
+              {
+                "id": "Medium",
+                "title": {
+                  "en": "Good",
+                  "nl": "Goed"
+                }
+              },
+              {
+                "id": "MediumHigh",
+                "title": {
+                  "en": "High",
+                  "nl": "Hoog"
+                }
+              },
+              {
+                "id": "TooHigh",
+                "title": {
+                  "en": "Too high",
+                  "nl": "Te hoog"
+                }
+              }
+            ]
+          },
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=analysr"
+          }
+        ]
+      },
+      {
+        "id": "status_ph",
+        "title": {
+          "en": "pH status !{{is|is not}} equal to...",
+          "nl": "pH status !{{is|is niet}} gelijk aan..."
+        },
+        "titleFormatted": {
+          "en": "pH status !{{is|is not}} equal to [[status_ph]]",
+          "nl": "pH status !{{is|is niet}} gelijk aan [[status_ph]]"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "args": [
+          {
+            "type": "dropdown",
+            "name": "status_ph",
+            "title": {
+              "en": "pH status"
+            },
+            "values": [
+              {
+                "id": "TooLow",
+                "title": {
+                  "en": "Too low",
+                  "nl": "Te laag"
+                }
+              },
+              {
+                "id": "MediumLow",
+                "title": {
+                  "en": "Low",
+                  "nl": "Laag"
+                }
+              },
+              {
+                "id": "Medium",
+                "title": {
+                  "en": "Good",
+                  "nl": "Goed"
+                }
+              },
+              {
+                "id": "MediumHigh",
+                "title": {
+                  "en": "High",
+                  "nl": "Hoog"
+                }
+              },
+              {
+                "id": "TooHigh",
+                "title": {
+                  "en": "Too high",
+                  "nl": "Te hoog"
+                }
+              }
+            ]
+          },
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=analysr"
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "images": {
+        "small": "/drivers/analysr/assets/images/small.png",
+        "large": "/drivers/analysr/assets/images/large.png",
+        "xlarge": "/drivers/analysr/assets/images/xlarge.png"
+      },
+      "icon": "/drivers/analysr/assets/icon.svg",
+      "connectivity": [
+        "cloud"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "energy": {
+        "batteries": [
+          "OTHER"
+        ]
+      },
+      "class": "other",
+      "pair": [
+        {
+          "id": "login_credentials",
+          "template": "login_credentials",
+          "options": {
+            "logo": "../../../assets/logo.png",
+            "usernameLabel": {
+              "en": "Username",
+              "nl": "Gebruikersnaam"
+            },
+            "usernamePlaceholder": {
+              "en": "example@email.com",
+              "nl": "voorbeeld@email.nl"
+            },
+            "passwordLabel": {
+              "en": "Password",
+              "nl": "Wachtwoord"
+            },
+            "passwordPlaceholder": {
+              "en": "Password",
+              "nl": "Wachtwoord"
+            }
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "analysr",
+      "name": "AnalysR",
+      "capabilities": [
+        "measure_ci",
+        "measure_orp",
+        "measure_ph",
+        "measure_temperature",
+        "status_ci",
+        "status_ph"
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Properties",
+            "nl": "Eigenschappen"
+          },
+          "children": [
+            {
+              "id": "volume",
+              "type": "label",
+              "label": {
+                "en": "Total Volume",
+                "nl": "Totaal volume"
+              },
+              "value": "-"
+            },
+            {
+              "id": "construction_year",
+              "type": "label",
+              "label": {
+                "en": "Construction year",
+                "nl": "Bouwjaar"
+              },
+              "value": "-"
+            },
+            {
+              "id": "version",
+              "type": "label",
+              "label": {
+                "en": "Version",
+                "nl": "Versie"
+              },
+              "value": "-"
+            },
+            {
+              "id": "serial_number",
+              "type": "label",
+              "label": {
+                "en": "Serial Number",
+                "nl": "Serienummer"
+              },
+              "value": "-"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "measure_ci": {
+      "type": "number",
+      "title": {
+        "en": "Chlorine value",
+        "nl": "Chloorwaarde"
+      },
+      "uiComponent": "sensor",
+      "icon": "/assets/ci.svg",
+      "decimals": 2,
+      "units": {
+        "en": "ppm"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Chlorine in parts-per-million (ppm)",
+        "nl": "Chloor deeltjes per miljoen (ppm)"
+      },
+      "chartType": "stepLine",
+      "getable": true,
+      "setable": false
+    },
+    "measure_orp": {
+      "type": "number",
+      "title": {
+        "en": "Redox value",
+        "nl": "Redoxwaarde"
+      },
+      "uiComponent": "sensor",
+      "icon": "/assets/orp.svg",
+      "decimals": 1,
+      "units": {
+        "en": "mV"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Redox value in millivolts (mV)",
+        "nl": "Redoxwaarde in millivolt (mV)"
+      },
+      "chartType": "stepLine",
+      "getable": true,
+      "setable": false
+    },
+    "measure_ph": {
+      "type": "number",
+      "title": {
+        "en": "pH value",
+        "nl": "pH waarde"
+      },
+      "uiComponent": "sensor",
+      "icon": "/assets/ph.svg",
+      "decimals": 2,
+      "insights": true,
+      "chartType": "spline",
+      "getable": true,
+      "setable": false
+    },
+    "status_ci": {
+      "type": "enum",
+      "title": {
+        "en": "Chloor status"
+      },
+      "uiComponent": null,
+      "getable": true,
+      "setable": false,
+      "values": [
+        {
+          "id": "TooLow",
+          "title": {
+            "en": "Too low",
+            "nl": "Te laag"
+          }
+        },
+        {
+          "id": "MediumLow",
+          "title": {
+            "en": "Low",
+            "nl": "Laag"
+          }
+        },
+        {
+          "id": "Medium",
+          "title": {
+            "en": "Good",
+            "nl": "Goed"
+          }
+        },
+        {
+          "id": "MediumHigh",
+          "title": {
+            "en": "High",
+            "nl": "Hoog"
+          }
+        },
+        {
+          "id": "TooHigh",
+          "title": {
+            "en": "Too high",
+            "nl": "Te hoog"
+          }
+        }
+      ]
+    },
+    "status_ph": {
+      "type": "enum",
+      "title": {
+        "en": "pH status"
+      },
+      "uiComponent": null,
+      "getable": true,
+      "setable": false,
+      "values": [
+        {
+          "id": "TooLow",
+          "title": {
+            "en": "Too low",
+            "nl": "Te laag"
+          }
+        },
+        {
+          "id": "MediumLow",
+          "title": {
+            "en": "Low",
+            "nl": "Laag"
+          }
+        },
+        {
+          "id": "Medium",
+          "title": {
+            "en": "Good",
+            "nl": "Goed"
+          }
+        },
+        {
+          "id": "MediumHigh",
+          "title": {
+            "en": "High",
+            "nl": "Hoog"
+          }
+        },
+        {
+          "id": "TooHigh",
+          "title": {
+            "en": "Too high",
+            "nl": "Te hoog"
+          }
+        }
+      ]
+    }
+  }
+}

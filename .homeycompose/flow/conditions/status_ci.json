@@ -1,0 +1,67 @@
+{
+  "id": "status_ci",
+  "title": {
+    "en": "Chlorine status !{{is|is not}} equal to...",
+    "nl": "Chloor status !{{is|is niet}} gelijk aan...."
+  },
+  "titleFormatted": {
+    "en": "Chlorine status !{{is|is not}} equal to [[status_ci]]",
+    "nl": "Chloor status !{{is|is niet}} gelijk aan [[status_ci]]"
+  },
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "args": [
+    {
+      "type": "dropdown",
+      "name": "status_ci",
+      "title": {
+        "en": "Chlorine status",
+        "nl": "Chloor status"
+      },
+      "values": [
+        {
+          "id": "TooLow",
+          "title": {
+            "en": "Too low",
+            "nl": "Te laag"
+          }
+        },
+        {
+          "id": "MediumLow",
+          "title": {
+            "en": "Low",
+            "nl": "Laag"
+          }
+        },
+        {
+          "id": "Medium",
+          "title": {
+            "en": "Good",
+            "nl": "Goed"
+          }
+        },
+        {
+          "id": "MediumHigh",
+          "title": {
+            "en": "High",
+            "nl": "Hoog"
+          }
+        },
+        {
+          "id": "TooHigh",
+          "title": {
+            "en": "Too high",
+            "nl": "Te hoog"
+          }
+        }
+      ]
+    },
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=analysr"
+    }
+  ]
+}

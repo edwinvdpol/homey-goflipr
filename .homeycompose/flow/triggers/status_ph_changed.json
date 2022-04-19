@@ -1,0 +1,30 @@
+{
+  "title": {
+    "en": "The pH status changed",
+    "nl": "De pH status is veranderd"
+  },
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=analysr"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "status_ph",
+      "type": "string",
+      "title": {
+        "en": "pH status"
+      },
+      "example": {
+        "en": "Too high",
+        "nl": "Te hoog"
+      }
+    }
+  ]
+}

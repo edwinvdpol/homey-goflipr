@@ -1,0 +1,31 @@
+{
+  "title": {
+    "en": "The chlorine status changed",
+    "nl": "De chloor status is veranderd"
+  },
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=analysr"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "status_ci",
+      "type": "string",
+      "title": {
+        "en": "Chlorine status",
+        "nl": "Chloor status"
+      },
+      "example": {
+        "en": "Too high",
+        "nl": "Te hoog"
+      }
+    }
+  ]
+}

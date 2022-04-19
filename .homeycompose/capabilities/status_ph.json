@@ -1,0 +1,46 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "pH status"
+  },
+  "uiComponent": null,
+  "getable": true,
+  "setable": false,
+  "values": [
+    {
+      "id": "TooLow",
+      "title": {
+        "en": "Too low",
+        "nl": "Te laag"
+      }
+    },
+    {
+      "id": "MediumLow",
+      "title": {
+        "en": "Low",
+        "nl": "Laag"
+      }
+    },
+    {
+      "id": "Medium",
+      "title": {
+        "en": "Good",
+        "nl": "Goed"
+      }
+    },
+    {
+      "id": "MediumHigh",
+      "title": {
+        "en": "High",
+        "nl": "Hoog"
+      }
+    },
+    {
+      "id": "TooHigh",
+      "title": {
+        "en": "Too high",
+        "nl": "Te hoog"
+      }
+    }
+  ]
+}

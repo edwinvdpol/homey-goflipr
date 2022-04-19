@@ -1,0 +1,21 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Chlorine value",
+    "nl": "Chloorwaarde"
+  },
+  "uiComponent": "sensor",
+  "icon": "/assets/ci.svg",
+  "decimals": 2,
+  "units": {
+    "en": "ppm"
+  },
+  "insights": true,
+  "desc": {
+    "en": "Chlorine in parts-per-million (ppm)",
+    "nl": "Chloor deeltjes per miljoen (ppm)"
+  },
+  "chartType": "stepLine",
+  "getable": true,
+  "setable": false
+}

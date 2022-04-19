@@ -1,0 +1,27 @@
+{
+  "title": {
+    "en": "The chlorine value changed",
+    "nl": "De chloor waarde is veranderd"
+  },
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=analysr"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "measure_ci",
+      "title": {
+        "en": "Chlorine"
+      },
+      "type": "number",
+      "example": 7.2
+    }
+  ]
+}

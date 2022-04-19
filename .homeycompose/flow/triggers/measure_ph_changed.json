@@ -1,0 +1,27 @@
+{
+  "title": {
+    "en": "The pH value changed",
+    "nl": "De pH waarde is veranderd"
+  },
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=analysr"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "measure_ph",
+      "title": {
+        "en": "pH"
+      },
+      "type": "number",
+      "example": 7.2
+    }
+  ]
+}

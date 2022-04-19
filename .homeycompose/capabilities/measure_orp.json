@@ -1,0 +1,21 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Redox value",
+    "nl": "Redoxwaarde"
+  },
+  "uiComponent": "sensor",
+  "icon": "/assets/orp.svg",
+  "decimals": 1,
+  "units": {
+    "en": "mV"
+  },
+  "insights": true,
+  "desc": {
+    "en": "Redox value in millivolts (mV)",
+    "nl": "Redoxwaarde in millivolt (mV)"
+  },
+  "chartType": "stepLine",
+  "getable": true,
+  "setable": false
+}

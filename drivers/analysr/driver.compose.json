@@ -1,0 +1,62 @@
+{
+  "id": "analysr",
+  "name": "AnalysR",
+  "capabilities": [
+    "measure_ci",
+    "measure_orp",
+    "measure_ph",
+    "measure_temperature",
+    "status_ci",
+    "status_ph"
+  ],
+  "settings": [
+    {
+      "type": "group",
+      "label": {
+        "en": "Properties",
+        "nl": "Eigenschappen"
+      },
+      "children": [
+        {
+          "id": "volume",
+          "type": "label",
+          "label": {
+            "en": "Total Volume",
+            "nl": "Totaal volume"
+          },
+          "value": "-"
+        },
+        {
+          "id": "construction_year",
+          "type": "label",
+          "label": {
+            "en": "Construction year",
+            "nl": "Bouwjaar"
+          },
+          "value": "-"
+        },
+        {
+          "id": "version",
+          "type": "label",
+          "label": {
+            "en": "Version",
+            "nl": "Versie"
+          },
+          "value": "-"
+        },
+        {
+          "id": "serial_number",
+          "type": "label",
+          "label": {
+            "en": "Serial Number",
+            "nl": "Serienummer"
+          },
+          "value": "-"
+        }
+      ]
+    }
+  ],
+  "$extends": [
+    "defaults"
+  ]
+}

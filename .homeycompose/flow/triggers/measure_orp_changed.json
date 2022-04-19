@@ -1,0 +1,27 @@
+{
+  "title": {
+    "en": "The redox value changed",
+    "nl": "De redoxwaarde is veranderd"
+  },
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=analysr"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "measure_orp",
+      "title": {
+        "en": "Redox"
+      },
+      "type": "number",
+      "example": 400
+    }
+  ]
+}
