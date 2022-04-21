@@ -9,8 +9,7 @@
     "nl": "Chloor status !{{is|is niet}} gelijk aan [[status_ci]]"
   },
   "platforms": [
-    "local",
-    "cloud"
+    "local"
   ],
   "args": [
     {

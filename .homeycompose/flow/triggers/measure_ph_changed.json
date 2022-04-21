@@ -4,8 +4,7 @@
     "nl": "De pH waarde is veranderd"
   },
   "platforms": [
-    "local",
-    "cloud"
+    "local"
   ],
   "args": [
     {

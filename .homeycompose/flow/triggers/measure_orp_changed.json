@@ -4,8 +4,7 @@
     "nl": "De redoxwaarde is veranderd"
   },
   "platforms": [
-    "local",
-    "cloud"
+    "local"
   ],
   "args": [
     {

@@ -9,8 +9,7 @@
     "cloud"
   ],
   "platforms": [
-    "local",
-    "cloud"
+    "local"
   ],
   "energy": {
     "batteries": [
