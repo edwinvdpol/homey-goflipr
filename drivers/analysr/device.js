@@ -18,6 +18,10 @@ class AnalysrDevice extends OAuth2Device {
   // Device deleted
   async onOAuth2Deleted() {
     this.log('Device deleted (oAuth2)');
+
+    await this.cleanup();
+
+    await this.homey.app.stopTimer();
   }
 
   // OAuth2 session is revoked
@@ -57,20 +61,6 @@ class AnalysrDevice extends OAuth2Device {
 
     // Sync device data
     this.syncDeviceData();
-  }
-
-  // Device saved
-  async onOAuth2Saved() {
-    this.log('Device saved (oAuth2)');
-  }
-
-  // Device uninitialized
-  async onOAuth2Uninit() {
-    this.log('Device uninitialized (oAuth2)');
-
-    await this.cleanup();
-
-    await this.homey.app.stopTimer();
   }
 
   /*
