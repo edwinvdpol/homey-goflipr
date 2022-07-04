@@ -19,7 +19,7 @@ class AnalysrDevice extends OAuth2Device {
   async onOAuth2Deleted() {
     this.log('Device deleted (oAuth2)');
 
-    await this.cleanup();
+    this.cleanup().catch(this.error);
 
     await this.homey.app.stopTimer();
   }
@@ -30,7 +30,7 @@ class AnalysrDevice extends OAuth2Device {
 
     this.setUnavailable(this.homey.__('error.revoked')).catch(this.error);
 
-    await this.cleanup();
+    this.cleanup().catch(this.error);
   }
 
   // OAuth2 session is expired
@@ -39,7 +39,7 @@ class AnalysrDevice extends OAuth2Device {
 
     this.setUnavailable(this.homey.__('error.expired')).catch(this.error);
 
-    await this.cleanup();
+    this.cleanup().catch(this.error);
   }
 
   // Device initialized
@@ -47,8 +47,6 @@ class AnalysrDevice extends OAuth2Device {
     this.log('Device initialized (oAuth2)');
 
     this.setUnavailable().catch(this.error);
-
-    this.fliprId = this.getData().id;
 
     // Wait for driver to become ready
     await this.driver.ready();
@@ -106,7 +104,8 @@ class AnalysrDevice extends OAuth2Device {
 
   // Update measures
   async updateMeasures() {
-    const measure = await this.oAuth2Client.getLastMeasures(this.fliprId);
+    const {id} = this.getData();
+    const measure = await this.oAuth2Client.getLastMeasures(id);
 
     if (measure.hasOwnProperty('Temperature')) {
         this.setCapabilityValue('measure_temperature', measure.Temperature).catch(this.error);
