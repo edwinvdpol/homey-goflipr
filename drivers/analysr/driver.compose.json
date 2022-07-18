@@ -1,6 +1,8 @@
 {
   "id": "analysr",
-  "name": "AnalysR",
+  "name": {
+    "en": "AnalysR"
+  },
   "capabilities": [
     "measure_ci",
     "measure_orp",
