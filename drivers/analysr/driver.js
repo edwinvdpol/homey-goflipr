@@ -27,7 +27,7 @@ class AnalysrDriver extends Driver {
     return devices;
   }
 
-  // Get data to create the device
+  // Return data to create the device
   getDeviceData(module, pool) {
     return {
       name: `${pool.Type.Name} (${module.Serial})`,
