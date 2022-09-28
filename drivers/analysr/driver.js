@@ -1,17 +1,17 @@
 'use strict';
 
 const Driver = require('../../lib/Driver');
-const {blank} = require('../../lib/Utils');
+const { blank } = require('../../lib/Utils');
 
 class AnalysrDriver extends Driver {
 
   // Pair devices
-  async onPairListDevices({oAuth2Client}) {
+  async onPairListDevices({ oAuth2Client }) {
     this.log('Listing devices');
 
     const modules = await oAuth2Client.getModules();
 
-    let devices = [];
+    const devices = [];
 
     // No devices found
     if (blank(modules.analysr)) {
@@ -32,15 +32,15 @@ class AnalysrDriver extends Driver {
     return {
       name: `${pool.Type.Name} (${module.Serial})`,
       data: {
-        id: module.Serial
+        id: module.Serial,
       },
       settings: {
         serial_number: module.Serial,
-        version: String(module.Version),
-        volume: String(pool.Volume) + ' m³',
-        construction_year: String(pool.BuiltYear)
-      }
-    }
+        version: `${module.Version}`,
+        volume: `${pool.Volume} m³`,
+        construction_year: `${pool.BuiltYear}`,
+      },
+    };
   }
 
 }
