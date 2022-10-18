@@ -61,12 +61,12 @@
       }
     }
   },
-  "homepage": "https://goflipr.com/",
-  "homeyCommunityTopicId": 62842,
-  "support": "https://community.homey.app/t/62842",
   "bugs": {
     "url": "https://community.homey.app/t/62842"
   },
+  "homeyCommunityTopicId": 62842,
+  "homepage": "https://goflipr.com",
+  "support": "https://community.homey.app/t/62842",
   "flow": {
     "triggers": [
       {
@@ -214,7 +214,6 @@
     ],
     "conditions": [
       {
-        "id": "status_ci",
         "title": {
           "en": "Chlorine status !{{is|is not}} equal to...",
           "nl": "Chloor status !{{is|is niet}} gelijk aan...."
@@ -277,10 +276,10 @@
             "name": "device",
             "filter": "driver_id=analysr"
           }
-        ]
+        ],
+        "id": "status_ci"
       },
       {
-        "id": "status_ph",
         "title": {
           "en": "pH status !{{is|is not}} equal to...",
           "nl": "pH status !{{is|is niet}} gelijk aan..."
@@ -342,30 +341,30 @@
             "name": "device",
             "filter": "driver_id=analysr"
           }
-        ]
+        ],
+        "id": "status_ph"
       }
     ]
   },
   "drivers": [
     {
+      "class": "other",
       "images": {
         "small": "/drivers/analysr/assets/images/small.png",
         "large": "/drivers/analysr/assets/images/large.png",
         "xlarge": "/drivers/analysr/assets/images/xlarge.png"
       },
-      "icon": "/drivers/analysr/assets/icon.svg",
-      "connectivity": [
-        "cloud"
-      ],
       "platforms": [
         "local"
+      ],
+      "connectivity": [
+        "cloud"
       ],
       "energy": {
         "batteries": [
           "OTHER"
         ]
       },
-      "class": "other",
       "pair": [
         {
           "id": "login_credentials",
@@ -402,7 +401,6 @@
           "template": "add_devices"
         }
       ],
-      "id": "analysr",
       "name": {
         "en": "AnalysR"
       },
@@ -460,7 +458,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": "analysr"
     }
   ],
   "capabilities": {

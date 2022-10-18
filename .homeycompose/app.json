@@ -60,10 +60,10 @@
       }
     }
   },
-  "homepage": "https://goflipr.com/",
-  "homeyCommunityTopicId": 62842,
-  "support": "https://community.homey.app/t/62842",
   "bugs": {
     "url": "https://community.homey.app/t/62842"
-  }
+  },
+  "homeyCommunityTopicId": 62842,
+  "homepage": "https://goflipr.com",
+  "support": "https://community.homey.app/t/62842"
 }
