@@ -1,46 +1,33 @@
 'use strict';
 
 const Driver = require('../../lib/Driver');
-const { blank } = require('../../lib/Utils');
 
 class AnalysrDriver extends Driver {
 
-  // Pair devices
-  async onPairListDevices({ oAuth2Client }) {
-    this.log('Listing devices');
-
-    const modules = await oAuth2Client.getModules();
-
-    const devices = [];
-
-    // No devices found
-    if (blank(modules.analysr)) {
-      return devices;
-    }
-
-    for (const module of modules.analysr) {
-      const pool = await oAuth2Client.getPool(module.Serial);
-
-      devices.push(this.getDeviceData(module, pool));
-    }
-
-    return devices;
-  }
-
   // Return data to create the device
-  getDeviceData(module, pool) {
-    return {
-      name: `${pool.Type.Name} (${module.Serial})`,
+  async getDeviceData(client, device) {
+    this.log(`Get device ${device.Serial} from API`);
+
+    let pool = await client.getDevice(device.Serial);
+
+    const data = {
+      name: `${pool.Type.Name} (${device.Serial})`,
       data: {
-        id: module.Serial,
+        id: device.Serial,
       },
       settings: {
-        serial_number: module.Serial,
-        version: `${module.Version}`,
+        serial_number: device.Serial,
+        version: `${device.Version}`,
         volume: `${pool.Volume} m³`,
         construction_year: `${pool.BuiltYear}`,
       },
     };
+
+    pool = null;
+
+    this.log('Device found', JSON.stringify(data));
+
+    return data;
   }
 
 }

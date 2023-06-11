@@ -5,14 +5,20 @@ const { filled } = require('../../lib/Utils');
 
 class AnalysrDevice extends Device {
 
-  // Set device data
-  handleSyncData(data) {
-    this.log('Update device', JSON.stringify(data));
+  /*
+  | Synchronization functions
+  */
 
+  // Handle sync data
+  async handleSyncData(data) {
+    this.log('[Sync]', JSON.stringify(data));
+
+    // Temperature
     if (filled(data.Temperature)) {
       this.setCapabilityValue('measure_temperature', data.Temperature).catch(this.error);
     }
 
+    // Desinfectant
     if (filled(data.Desinfectant)) {
       if (filled(data.Desinfectant.Value)) {
         this.setCapabilityValue('measure_ci', data.Desinfectant.Value).catch(this.error);
@@ -23,6 +29,7 @@ class AnalysrDevice extends Device {
       }
     }
 
+    // PH value
     if (filled(data.PH)) {
       if (filled(data.PH.Value)) {
         this.setCapabilityValue('measure_ph', data.PH.Value).catch(this.error);
@@ -33,6 +40,7 @@ class AnalysrDevice extends Device {
       }
     }
 
+    // Oxydo reduction potentiel
     if (filled(data.OxydoReductionPotentiel)) {
       if (filled(data.OxydoReductionPotentiel.Value)) {
         this.setCapabilityValue('measure_orp', data.OxydoReductionPotentiel.Value).catch(this.error);
