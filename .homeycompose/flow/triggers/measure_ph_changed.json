@@ -17,7 +17,8 @@
     {
       "name": "measure_ph",
       "title": {
-        "en": "pH"
+        "en": "pH value",
+        "nl": "pH waarde"
       },
       "type": "number",
       "example": 7.2

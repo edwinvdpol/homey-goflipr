@@ -15,8 +15,7 @@
       "type": "dropdown",
       "name": "status_ci",
       "title": {
-        "en": "chlorine status",
-        "nl": "chloor status"
+        "en": "status"
       },
       "values": [
         {

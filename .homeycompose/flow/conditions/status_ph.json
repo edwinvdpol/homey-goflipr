@@ -15,7 +15,7 @@
       "type": "dropdown",
       "name": "status_ph",
       "title": {
-        "en": "pH status"
+        "en": "status"
       },
       "values": [
         {

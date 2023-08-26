@@ -1,7 +1,7 @@
 {
   "title": {
     "en": "The redox value changed",
-    "nl": "De redoxwaarde is veranderd"
+    "nl": "De redox waarde is veranderd"
   },
   "platforms": [
     "local"
@@ -17,7 +17,8 @@
     {
       "name": "measure_orp",
       "title": {
-        "en": "Redox"
+        "en": "Redox value",
+        "nl": "Redox waarde"
       },
       "type": "number",
       "example": 400
