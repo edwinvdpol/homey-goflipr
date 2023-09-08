@@ -59,7 +59,7 @@
     {
       "type": "device",
       "name": "device",
-      "filter": "driver_id=analysr"
+      "filter": "driver_id=analysr&capabilities=status_ci"
     }
   ]
 }

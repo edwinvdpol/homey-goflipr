@@ -75,26 +75,30 @@
           "en": "The chlorine value changed",
           "nl": "De chloor waarde is veranderd"
         },
+        "hint": {
+          "en": "This flowcard triggers when the chlorine value was changed.",
+          "nl": "Deze flowcard wordt geactiveerd wanneer de chloor waarde veranderd werd."
+        },
         "platforms": [
           "local",
           "cloud"
         ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=analysr"
-          }
-        ],
         "tokens": [
           {
+            "type": "number",
             "name": "measure_ci",
             "title": {
               "en": "Chlorine value",
               "nl": "Chloor waarde"
             },
-            "type": "number",
             "example": 7.2
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=analysr&capabilities=measure_ci"
           }
         ],
         "id": "measure_ci_changed"
@@ -104,26 +108,30 @@
           "en": "The redox value changed",
           "nl": "De redox waarde is veranderd"
         },
+        "hint": {
+          "en": "This flowcard triggers when the redox value was changed.",
+          "nl": "Deze flowcard wordt geactiveerd wanneer de redox waarde veranderd werd."
+        },
         "platforms": [
           "local",
           "cloud"
         ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=analysr"
-          }
-        ],
         "tokens": [
           {
+            "type": "number",
             "name": "measure_orp",
             "title": {
               "en": "Redox value",
               "nl": "Redox waarde"
             },
-            "type": "number",
             "example": 400
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=analysr&capabilities=measure_orp"
           }
         ],
         "id": "measure_orp_changed"
@@ -133,26 +141,30 @@
           "en": "The pH value changed",
           "nl": "De pH waarde is veranderd"
         },
+        "hint": {
+          "en": "This flowcard triggers when the pH value was changed.",
+          "nl": "Deze flowcard wordt geactiveerd wanneer de pH waarde veranderd werd."
+        },
         "platforms": [
           "local",
           "cloud"
         ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=analysr"
-          }
-        ],
         "tokens": [
           {
+            "type": "number",
             "name": "measure_ph",
             "title": {
               "en": "pH value",
               "nl": "pH waarde"
             },
-            "type": "number",
             "example": 7.2
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=analysr&capabilities=measure_ph"
           }
         ],
         "id": "measure_ph_changed"
@@ -162,21 +174,18 @@
           "en": "The chlorine status changed",
           "nl": "De chloor status is veranderd"
         },
+        "hint": {
+          "en": "This flowcard triggers when the chlorine status was changed.",
+          "nl": "Deze flowcard wordt geactiveerd wanneer de chloor status veranderd werd."
+        },
         "platforms": [
           "local",
           "cloud"
         ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=analysr"
-          }
-        ],
         "tokens": [
           {
-            "name": "status_ci",
             "type": "string",
+            "name": "status_ci",
             "title": {
               "en": "Chlorine status",
               "nl": "Chloor status"
@@ -187,6 +196,13 @@
             }
           }
         ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=analysr&capabilities=status_ci"
+          }
+        ],
         "id": "status_ci_changed"
       },
       {
@@ -194,21 +210,18 @@
           "en": "The pH status changed",
           "nl": "De pH status is veranderd"
         },
+        "hint": {
+          "en": "This flowcard triggers when the pH status was changed.",
+          "nl": "Deze flowcard wordt geactiveerd wanneer de pH status veranderd werd."
+        },
         "platforms": [
           "local",
           "cloud"
         ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=analysr"
-          }
-        ],
         "tokens": [
           {
-            "name": "status_ph",
             "type": "string",
+            "name": "status_ph",
             "title": {
               "en": "pH status"
             },
@@ -216,6 +229,13 @@
               "en": "Too high",
               "nl": "Te hoog"
             }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=analysr&capabilities=status_ph"
           }
         ],
         "id": "status_ph_changed"
@@ -283,7 +303,7 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=analysr"
+            "filter": "driver_id=analysr&capabilities=status_ci"
           }
         ],
         "id": "status_ci"
@@ -349,7 +369,7 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=analysr"
+            "filter": "driver_id=analysr&capabilities=status_ph"
           }
         ],
         "id": "status_ph"

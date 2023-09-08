@@ -3,26 +3,30 @@
     "en": "The redox value changed",
     "nl": "De redox waarde is veranderd"
   },
+  "hint": {
+    "en": "This flowcard triggers when the redox value was changed.",
+    "nl": "Deze flowcard wordt geactiveerd wanneer de redox waarde veranderd werd."
+  },
   "platforms": [
     "local",
     "cloud"
   ],
-  "args": [
-    {
-      "type": "device",
-      "name": "device",
-      "filter": "driver_id=analysr"
-    }
-  ],
   "tokens": [
     {
+      "type": "number",
       "name": "measure_orp",
       "title": {
         "en": "Redox value",
         "nl": "Redox waarde"
       },
-      "type": "number",
       "example": 400
+    }
+  ],
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=analysr&capabilities=measure_orp"
     }
   ]
 }

@@ -3,21 +3,18 @@
     "en": "The pH status changed",
     "nl": "De pH status is veranderd"
   },
+  "hint": {
+    "en": "This flowcard triggers when the pH status was changed.",
+    "nl": "Deze flowcard wordt geactiveerd wanneer de pH status veranderd werd."
+  },
   "platforms": [
     "local",
     "cloud"
   ],
-  "args": [
-    {
-      "type": "device",
-      "name": "device",
-      "filter": "driver_id=analysr"
-    }
-  ],
   "tokens": [
     {
-      "name": "status_ph",
       "type": "string",
+      "name": "status_ph",
       "title": {
         "en": "pH status"
       },
@@ -25,6 +22,13 @@
         "en": "Too high",
         "nl": "Te hoog"
       }
+    }
+  ],
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=analysr&capabilities=status_ph"
     }
   ]
 }

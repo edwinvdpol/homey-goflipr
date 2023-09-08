@@ -3,26 +3,30 @@
     "en": "The chlorine value changed",
     "nl": "De chloor waarde is veranderd"
   },
+  "hint": {
+    "en": "This flowcard triggers when the chlorine value was changed.",
+    "nl": "Deze flowcard wordt geactiveerd wanneer de chloor waarde veranderd werd."
+  },
   "platforms": [
     "local",
     "cloud"
   ],
-  "args": [
-    {
-      "type": "device",
-      "name": "device",
-      "filter": "driver_id=analysr"
-    }
-  ],
   "tokens": [
     {
+      "type": "number",
       "name": "measure_ci",
       "title": {
         "en": "Chlorine value",
         "nl": "Chloor waarde"
       },
-      "type": "number",
       "example": 7.2
+    }
+  ],
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=analysr&capabilities=measure_ci"
     }
   ]
 }
