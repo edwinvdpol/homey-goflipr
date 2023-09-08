@@ -4,7 +4,8 @@
     "nl": "De chloor status is veranderd"
   },
   "platforms": [
-    "local"
+    "local",
+    "cloud"
   ],
   "args": [
     {

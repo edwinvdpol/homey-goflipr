@@ -1,14 +1,15 @@
 {
   "title": {
-    "en": "Chlorine status !{{is|is not}} equal to...",
-    "nl": "Chloor status !{{is|is niet}} gelijk aan...."
+    "en": "Chlorine status !{{is|is not}}",
+    "nl": "Chloor status !{{is|is niet}}"
   },
   "titleFormatted": {
     "en": "Chlorine status !{{is|is not}} equal to [[status_ci]]",
     "nl": "Chloor status !{{is|is niet}} gelijk aan [[status_ci]]"
   },
   "platforms": [
-    "local"
+    "local",
+    "cloud"
   ],
   "args": [
     {

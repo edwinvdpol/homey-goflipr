@@ -4,7 +4,8 @@
   "version": "1.1.2",
   "compatibility": ">=5.0.0",
   "platforms": [
-    "local"
+    "local",
+    "cloud"
   ],
   "sdk": 3,
   "brandColor": "#3385A9",
@@ -75,7 +76,8 @@
           "nl": "De chloor waarde is veranderd"
         },
         "platforms": [
-          "local"
+          "local",
+          "cloud"
         ],
         "args": [
           {
@@ -103,7 +105,8 @@
           "nl": "De redox waarde is veranderd"
         },
         "platforms": [
-          "local"
+          "local",
+          "cloud"
         ],
         "args": [
           {
@@ -131,7 +134,8 @@
           "nl": "De pH waarde is veranderd"
         },
         "platforms": [
-          "local"
+          "local",
+          "cloud"
         ],
         "args": [
           {
@@ -159,7 +163,8 @@
           "nl": "De chloor status is veranderd"
         },
         "platforms": [
-          "local"
+          "local",
+          "cloud"
         ],
         "args": [
           {
@@ -190,7 +195,8 @@
           "nl": "De pH status is veranderd"
         },
         "platforms": [
-          "local"
+          "local",
+          "cloud"
         ],
         "args": [
           {
@@ -218,15 +224,16 @@
     "conditions": [
       {
         "title": {
-          "en": "Chlorine status !{{is|is not}} equal to...",
-          "nl": "Chloor status !{{is|is niet}} gelijk aan...."
+          "en": "Chlorine status !{{is|is not}}",
+          "nl": "Chloor status !{{is|is niet}}"
         },
         "titleFormatted": {
           "en": "Chlorine status !{{is|is not}} equal to [[status_ci]]",
           "nl": "Chloor status !{{is|is niet}} gelijk aan [[status_ci]]"
         },
         "platforms": [
-          "local"
+          "local",
+          "cloud"
         ],
         "args": [
           {
@@ -283,15 +290,16 @@
       },
       {
         "title": {
-          "en": "pH status !{{is|is not}} equal to...",
-          "nl": "pH status !{{is|is niet}} gelijk aan..."
+          "en": "pH status !{{is|is not}}",
+          "nl": "pH status !{{is|is niet}}"
         },
         "titleFormatted": {
           "en": "pH status !{{is|is not}} equal to [[status_ph]]",
           "nl": "pH status !{{is|is niet}} gelijk aan [[status_ph]]"
         },
         "platforms": [
-          "local"
+          "local",
+          "cloud"
         ],
         "args": [
           {
@@ -357,7 +365,8 @@
         "xlarge": "/drivers/analysr/assets/images/xlarge.png"
       },
       "platforms": [
-        "local"
+        "local",
+        "cloud"
       ],
       "connectivity": [
         "cloud"

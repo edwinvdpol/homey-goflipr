@@ -1,14 +1,15 @@
 {
   "title": {
-    "en": "pH status !{{is|is not}} equal to...",
-    "nl": "pH status !{{is|is niet}} gelijk aan..."
+    "en": "pH status !{{is|is not}}",
+    "nl": "pH status !{{is|is niet}}"
   },
   "titleFormatted": {
     "en": "pH status !{{is|is not}} equal to [[status_ph]]",
     "nl": "pH status !{{is|is niet}} gelijk aan [[status_ph]]"
   },
   "platforms": [
-    "local"
+    "local",
+    "cloud"
   ],
   "args": [
     {
