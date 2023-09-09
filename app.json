@@ -248,8 +248,8 @@
           "nl": "Chloor status !{{is|is niet}}"
         },
         "titleFormatted": {
-          "en": "Chlorine status !{{is|is not}} equal to [[status_ci]]",
-          "nl": "Chloor status !{{is|is niet}} gelijk aan [[status_ci]]"
+          "en": "Chlorine status !{{is|is not}} [[status_ci]]",
+          "nl": "Chloor status !{{is|is niet}} [[status_ci]]"
         },
         "platforms": [
           "local",
@@ -314,8 +314,8 @@
           "nl": "pH status !{{is|is niet}}"
         },
         "titleFormatted": {
-          "en": "pH status !{{is|is not}} equal to [[status_ph]]",
-          "nl": "pH status !{{is|is niet}} gelijk aan [[status_ph]]"
+          "en": "pH status !{{is|is not}} [[status_ph]]",
+          "nl": "pH status !{{is|is niet}} [[status_ph]]"
         },
         "platforms": [
           "local",
