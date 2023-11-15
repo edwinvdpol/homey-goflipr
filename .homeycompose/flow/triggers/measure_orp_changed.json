@@ -8,8 +8,7 @@
     "nl": "Deze flowcard wordt geactiveerd wanneer de redox waarde veranderd werd."
   },
   "platforms": [
-    "local",
-    "cloud"
+    "local"
   ],
   "tokens": [
     {

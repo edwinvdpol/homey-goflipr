@@ -4,8 +4,7 @@
   "version": "1.2.0",
   "compatibility": ">=5.0.0",
   "platforms": [
-    "local",
-    "cloud"
+    "local"
   ],
   "sdk": 3,
   "brandColor": "#3385A9",
@@ -80,8 +79,7 @@
           "nl": "Deze flowcard wordt geactiveerd wanneer de chloor waarde veranderd werd."
         },
         "platforms": [
-          "local",
-          "cloud"
+          "local"
         ],
         "tokens": [
           {
@@ -113,8 +111,7 @@
           "nl": "Deze flowcard wordt geactiveerd wanneer de redox waarde veranderd werd."
         },
         "platforms": [
-          "local",
-          "cloud"
+          "local"
         ],
         "tokens": [
           {
@@ -146,8 +143,7 @@
           "nl": "Deze flowcard wordt geactiveerd wanneer de pH waarde veranderd werd."
         },
         "platforms": [
-          "local",
-          "cloud"
+          "local"
         ],
         "tokens": [
           {
@@ -179,8 +175,7 @@
           "nl": "Deze flowcard wordt geactiveerd wanneer de chloor status veranderd werd."
         },
         "platforms": [
-          "local",
-          "cloud"
+          "local"
         ],
         "tokens": [
           {
@@ -215,8 +210,7 @@
           "nl": "Deze flowcard wordt geactiveerd wanneer de pH status veranderd werd."
         },
         "platforms": [
-          "local",
-          "cloud"
+          "local"
         ],
         "tokens": [
           {
@@ -252,8 +246,7 @@
           "nl": "Chloor status !{{is|is niet}} [[status_ci]]"
         },
         "platforms": [
-          "local",
-          "cloud"
+          "local"
         ],
         "args": [
           {
@@ -318,8 +311,7 @@
           "nl": "pH status !{{is|is niet}} [[status_ph]]"
         },
         "platforms": [
-          "local",
-          "cloud"
+          "local"
         ],
         "args": [
           {
@@ -385,8 +377,7 @@
         "xlarge": "/drivers/analysr/assets/images/xlarge.png"
       },
       "platforms": [
-        "local",
-        "cloud"
+        "local"
       ],
       "connectivity": [
         "cloud"

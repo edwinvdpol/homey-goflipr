@@ -8,8 +8,7 @@
     "nl": "Deze flowcard wordt geactiveerd wanneer de chloor status veranderd werd."
   },
   "platforms": [
-    "local",
-    "cloud"
+    "local"
   ],
   "tokens": [
     {

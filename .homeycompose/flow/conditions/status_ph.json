@@ -8,8 +8,7 @@
     "nl": "pH status !{{is|is niet}} [[status_ph]]"
   },
   "platforms": [
-    "local",
-    "cloud"
+    "local"
   ],
   "args": [
     {
