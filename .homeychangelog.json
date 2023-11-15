@@ -1,4 +1,7 @@
 {
+  "1.2.1": {
+    "en": "Improved flow cards and logging."
+  },
   "1.2.0": {
     "en": "Homey Cloud compatibility. Improved flow cards and logging."
   },
