@@ -48,8 +48,6 @@ class AnalysrDevice extends Device {
         this.setCapabilityValue('measure_orp', data.OxydoReductionPotentiel.Value).catch(this.error);
       }
     }
-
-    this.setAvailable().catch(this.error);
   }
 
 }
