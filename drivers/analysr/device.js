@@ -1,7 +1,7 @@
 'use strict';
 
 const Device = require('../../lib/Device');
-const { blank, filled } = require('../../lib/Utils');
+const { blank } = require('../../lib/Utils');
 
 class AnalysrDevice extends Device {
 
