@@ -1,4 +1,7 @@
 {
+  "authentication": {
+    "connecting": "Connecting..."
+  },
   "error": {
     "401": "Flipr API credentials are incorrect",
     "403": "Flipr API has denied access to this device",
