@@ -3,6 +3,7 @@
     "connecting": "Connecting..."
   },
   "error": {
+    "400": "Inloggegevens van de Flipr API zijn onjuist",
     "401": "Flipr API credentials are incorrect",
     "403": "Flipr API has denied access to this device",
     "404": "Device not found in Flipr account",
