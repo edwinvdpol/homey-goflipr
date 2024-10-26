@@ -25,5 +25,8 @@
   },
   "1.2.3": {
     "en": "Added device repair."
+  },
+  "1.2.4": {
+    "en": "Fixed retrieve data error."
   }
 }
