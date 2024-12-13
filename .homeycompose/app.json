@@ -1,7 +1,7 @@
 {
   "id": "com.goflipr",
   "version": "1.2.4",
-  "compatibility": ">=7.4.0",
+  "compatibility": ">=12.2.0",
   "platforms": [
     "local"
   ],
