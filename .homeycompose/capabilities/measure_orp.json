@@ -5,7 +5,7 @@
     "nl": "Redoxwaarde"
   },
   "uiComponent": "sensor",
-  "icon": "/assets/orp.svg",
+  "icon": "/assets/capabilities/orp.svg",
   "decimals": 1,
   "units": {
     "en": "mV"

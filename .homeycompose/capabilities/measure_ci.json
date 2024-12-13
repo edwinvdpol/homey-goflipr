@@ -5,7 +5,7 @@
     "nl": "Chloorwaarde"
   },
   "uiComponent": "sensor",
-  "icon": "/assets/ci.svg",
+  "icon": "/assets/capabilities/ci.svg",
   "decimals": 2,
   "units": {
     "en": "ppm"
