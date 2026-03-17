@@ -76,5 +76,37 @@
         }
       }
     }
+  ],
+  "settings": [
+    {
+      "type": "group",
+      "label": {
+        "en": "Properties",
+        "nl": "Eigenschappen"
+      },
+      "children": [
+        {
+          "$extends": "volume"
+        },
+        {
+          "$extends": "version"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "label": {
+        "en": "Product",
+        "nl": "Product"
+      },
+      "children": [
+        {
+          "$extends": "serial_number"
+        },
+        {
+          "$extends": "construction_year"
+        }
+      ]
+    }
   ]
 }

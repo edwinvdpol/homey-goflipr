@@ -416,17 +416,6 @@
           }
         }
       ],
-      "name": {
-        "en": "AnalysR"
-      },
-      "capabilities": [
-        "measure_ci",
-        "measure_orp",
-        "measure_ph",
-        "measure_temperature",
-        "status_ci",
-        "status_ph"
-      ],
       "settings": [
         {
           "type": "group",
@@ -445,15 +434,6 @@
               "value": "-"
             },
             {
-              "id": "construction_year",
-              "type": "label",
-              "label": {
-                "en": "Construction year",
-                "nl": "Bouwjaar"
-              },
-              "value": "-"
-            },
-            {
               "id": "version",
               "type": "label",
               "label": {
@@ -461,7 +441,16 @@
                 "nl": "Versie"
               },
               "value": "-"
-            },
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Product",
+            "nl": "Product"
+          },
+          "children": [
             {
               "id": "serial_number",
               "type": "label",
@@ -470,9 +459,29 @@
                 "nl": "Serienummer"
               },
               "value": "-"
+            },
+            {
+              "id": "construction_year",
+              "type": "label",
+              "label": {
+                "en": "Construction year",
+                "nl": "Bouwjaar"
+              },
+              "value": "-"
             }
           ]
         }
+      ],
+      "name": {
+        "en": "AnalysR"
+      },
+      "capabilities": [
+        "measure_ci",
+        "measure_orp",
+        "measure_ph",
+        "measure_temperature",
+        "status_ci",
+        "status_ph"
       ],
       "id": "analysr"
     }
